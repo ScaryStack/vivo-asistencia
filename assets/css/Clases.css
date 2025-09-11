@@ -1,93 +1,70 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  gap: 16px 16px;
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-.grid-item {
-  border-radius: 4px;
+h1 {
+  margin-bottom: 20px;
+}
+
+.container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 600;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 20px;
+  gap: 20px;
 }
 
-.item-1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  background-color: #3b82f6;
+.clases {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
 }
 
-.item-2 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  background-color: #ef4444;
+.clases button {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.item-3 {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  background-color: #10b981;
+.detalle {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.item-4 {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  background-color: #f59e0b;
+.detalle-info {
+  margin-bottom: 20px;
 }
 
-.item-5 {
-  grid-column: 1 / 2;
-  grid-row: 5 / 6;
-  background-color: #8b5cf6;
+.acciones {
+  display: flex;
+  gap: 20px;
 }
 
-.item-6 {
-  grid-column: 1 / 2;
-  grid-row: 6 / 7;
-  background-color: #06b6d4;
+.acciones button {
+  flex: 1;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.item-7 {
-  grid-column: 1 / 2;
-  grid-row: 7 / 8;
-  background-color: #f97316;
-}
-
-.item-8 {
-  grid-column: 1 / 2;
-  grid-row: 8 / 9;
-  background-color: #84cc16;
-}
-
-.item-9 {
-  grid-column: 2 / 3;
-  grid-row: 6 / 7;
-  background-color: #ec4899;
-}
-
-.item-10 {
-  grid-column: 2 / 3;
-  grid-row: 5 / 6;
-  background-color: #6366f1;
-}
-
-.item-11 {
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
-  background-color: #3b82f6;
-}
-
-.item-12 {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
-  background-color: #ef4444;
-}
-
-.item-13 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  background-color: #10b981;
+.acciones button:hover,
+.navbar button:hover,
+.clases button:hover {
+  background: #333;
 }

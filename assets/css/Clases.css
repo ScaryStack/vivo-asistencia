@@ -91,21 +91,3 @@
   grid-row: 2 / 3;
   background-color: #10b981;
 }
-
-/* Tablet styles */
-@media (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 16px 16px;
-  }
-}
-
-/* Mobile styles */
-@media (max-width: 640px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 16px 16px;
-  }
-}

@@ -1,16 +1,37 @@
-function mostrarDetalle(clase) {
-  const detalle = document.getElementById("detalle-info");
-  detalle.innerHTML = `
-    <p><strong>${clase}</strong></p>
-    <p>Sala Nº ${(Math.floor(Math.random() * 100) + 1)}</p>
-    <p>De ${Math.floor(Math.random() * 12 + 8)}:00 hrs a ${Math.floor(Math.random() * 12 + 9)}:00 hrs</p>
+function getSalaRandom() {
+  // Definimos los rangos
+  const rangos = [
+    [100, 145],
+    [200, 245],
+    [300, 345],
+    [400, 445],
+    [500, 545],
+    [600, 645]
+  ];
+
+  // Elegimos un rango al azar
+  const rango = rangos[Math.floor(Math.random() * rangos.length)];
+
+  // Generamos un número dentro de ese rango
+  return Math.floor(Math.random() * (rango[1] - rango[0] + 1)) + rango[0];
+}
+
+function mostrarClase(nombre) {
+  const sala = getSalaRandom();
+  const horaInicio = Math.floor(Math.random() * 10) + 12; // entre 8:00 y 22:00
+  const horaFin = horaInicio + 2; // siempre 2 horas después
+
+  document.getElementById("detalle-info").innerHTML = `
+    <h3>${nombre}</h3>
+    <p>Sala N° ${sala}</p>
+    <p>De ${horaInicio}:00 hrs a ${horaFin}:00 hrs</p>
   `;
 }
 
 function marcarAsistencia() {
-    alert("Asistencia marcada ✅");
+  alert("Asistencia marcada ✅");
 }
 
 function marcarSalida() {
-    alert("Salida marcada 👋");
+  alert("Salida marcada 👋");
 }

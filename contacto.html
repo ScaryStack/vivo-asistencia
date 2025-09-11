@@ -4,8 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+
     <!--Libreria BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*Color fondo*/
+        body {
+            font-family: 'Sehoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        /*Navegacion*/
+            nav{
+            background-color: #dddddd;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) ;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+        .navbar {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+
+        }
+        
+        .navbar li {
+            margin: 0;
+        }
+         .navbar a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #000000;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 20px 25px;
+            border: 2px solid #e3e6f0;
+            border-radius: 8px;
+            background-color: #f8f9fc;
+            min-width: 120px;
+            min-height: 70px;
+             text-align: center;
+        }
+            /*se oscurecen al pasar mouse*/
+        .navbar a:hover {
+            color: #ffffff;
+            background-color: #520d7f;
+            border-color: #520d7f;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(200, 202, 210, 0.3);
+        }
+        .navbar a.active {
+            color: #242121;
+            background-color: #2f4a99;
+            border-color: #2f4a99;
+        }
+        /* Encabezado */
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+        
+        .contact-header h1 {
+            font-size: 2.5rem;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .contact-header p {
+            font-size: 1.2rem;
+            color: #8b9197;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        /* Sección de imágenes */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;          
+            flex-wrap: wrap;    
+            margin-bottom: 50px;
+        }
+        image-card {
+            flex: 1 1 45%;      
+            max-width: 500px;
+            min-width: 300px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-info {
+            padding: 20px;
+        }
+        
+        .image-info h3 {
+            color: #1d40a6;
+            margin-bottom: 10px;
+        }
+        
+        .image-info p {
+            color: #000000;
+            line-height: 1.6;
+        }
+         /* Mensaje de error para imágenes */
+        .image-error {
+            padding: 20px;
+            text-align: center;
+            color: #dc3545;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            margin: 10px 0;
+            display: none;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-card {
+                width: 100%;
+                max-width: 500px;
+            }
+        }       
+
+    </style> 
+
     
 </head>
 <body>
@@ -19,7 +181,36 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
+
+        <div class = "contact-header">
+            <h1>Contactanos</h1>
+            <p>Holaaaaaaaaaaaaaaaaaa </p>
+            
+
+    </div> 
+
+    <div class = "image-container">
+        <div class = "image-card">
+
+            <img src = "assets/images/imagen_patricio_estrella.jpg" alt = "Imagen_patricio_estrella">
+            
+            <div class = "image-info">
+            <h3>Patricio Jimenez</h3>
+            <p>ohhhhhhhhhhhhhhhhhhhh</p>
+            </div>
+        </div> 
+        
+        
+        <div class = "image-card">
+            <img src = "assets/images/yamahar9.jpeg" alt ="Imagen 2 ">
+            <div class = "image-info">
+                <h3>Benjamin Morales B.</h3>
+                <p>ahhhhhhhhhhhhhhhhhhh</p>
+            </div>    
+        </div>
     </div>
+
+
     <!--Libreria BootStrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 

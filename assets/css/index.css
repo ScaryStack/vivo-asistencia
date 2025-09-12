@@ -16,7 +16,7 @@ p {
     color: var(--blanco);
 }
 
-/* Navbar */
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -27,6 +27,7 @@ p {
     margin: 10px;
 }
 
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -35,20 +36,17 @@ p {
     padding: 0;
 }
 
-.navbar ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: var(--azul-oscuro);
-    text-decoration: none;
-    border: 2px solid var(--amarillo);
+
     border-radius: 10px;
     transition: all 0.3s ease;
 }
+
 
 .navbar ul li a:hover {
     background-color: var(--amarillo);
     color: black;
 }
+
 
 .navbar ul li a.active {
     background-color: var(--amarillo);

@@ -16,7 +16,7 @@ p {
     color: var(--blanco);
 }
 
-/* Contenedor navbar */
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@ p {
     margin: 10px;
 }
 
-/* Lista horizontal */
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -36,24 +36,18 @@ p {
     padding: 0;
 }
 
-/* Botones como enlaces */
-.navbar ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: var(--blanco);
-    text-decoration: none;
-    border: 2px solid var(--blanco);
+
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
-/* Hover */
+
 .navbar ul li a:hover {
     background-color: var(--amarillo);
     color: black;
 }
 
-/* Activo */
+
 .navbar ul li a.active {
     background-color: var(--amarillo);
     color: black;

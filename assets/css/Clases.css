@@ -1,16 +1,19 @@
 :root {
-  --azul-oscuro: #002c5f;
-  --azul-claro: #00509e;
-  --amarillo: #fdb913;
-  --gris-fondo: #f5f6fa;
+  --azul-oscuro: #0d1b2a;
+  --azul-claro: #1b263b;
+  --amarillo: #ffcc00;
   --blanco: #ffffff;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: var(--gris-fondo);
-  color: var(--azul-oscuro);
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+}
+
+p {
+  color: #000;
 }
 
 /* Contenedor principal */
@@ -22,46 +25,46 @@ body {
 
 /* Contenedor navbar */
 .navbar {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: var(--azul-claro);
-    border: 2px solid var(--azul-oscuro);
-    border-radius: 15px;
-    margin: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--azul-claro);
+  border: 2px solid var(--azul-oscuro);
+  border-radius: 15px;
+  margin: 10px;
 }
 
 /* Lista horizontal */
 .navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 /* Botones como enlaces */
 .navbar ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: var(--blanco);
-    text-decoration: none;
-    border: 2px solid var(--blanco);
-    border-radius: 10px;
-    transition: all 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--blanco);
+  text-decoration: none;
+  border: 2px solid var(--blanco);
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 /* Hover */
 .navbar ul li a:hover {
-    background-color: var(--amarillo);
-    color: black;
+  background-color: var(--amarillo);
+  color: black;
 }
 
 /* Activo */
 .navbar ul li a.active {
-    background-color: var(--amarillo);
-    color: black;
-    font-weight: bold;
+  background-color: var(--amarillo);
+  color: black;
+  font-weight: bold;
 }
 
 

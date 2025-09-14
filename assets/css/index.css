@@ -36,7 +36,12 @@ p {
     padding: 0;
 }
 
-
+.navbar ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--azul-oscuro);
+    text-decoration: none;
+    border: 2px solid var(--amarillo);
     border-radius: 10px;
     transition: all 0.3s ease;
 }

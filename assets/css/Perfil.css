@@ -79,6 +79,13 @@
             width: 100px;
         }     
         
+        /*Color notas perfil y tamaño*/
+        .note-content p{
+            font-size: 18px;
+            line-height: 1.5;
+            color: #000000;
+        }
+        
 
         /* Botones */
       
@@ -158,4 +165,15 @@
             left: 10px;
         }
         
+
+        /* Estilos para los inputs en modo edición (JS lo utiliza) */
+        .edit-input {
+            border: 1px solid #000000 !important;
+            padding: 5px !important;
+            border-radius: 4px !important;
+            margin-left: 5px !important;
+            width: 70% !important;
+        }
+
        
+    

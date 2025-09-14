@@ -9,8 +9,7 @@
 /* Fondo y tipografía */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
-  color: #000000;
+  background: linear-gradient(135deg, #0d1b2a 0%, #0d1b2a 100%);
   line-height: 1.6;
   min-height: 100vh;
 }
@@ -20,7 +19,7 @@ body {
   min-height: 100vh
 }
 
-/* Encabezado */
+/* Encabezadooo */
 .contact-header {
   text-align: center;
   margin-bottom: 40px;
@@ -28,12 +27,12 @@ body {
 }
 .contact-header h1 {
   font-size: 2.5rem;
-  color: #000000;
+  color: #ffcc00;
   margin-bottom: 15px;
 }
 .contact-header p {
   font-size: 1.2rem;
-  color: #363637;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -62,11 +61,11 @@ body {
   backface-visibility: hidden;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px rgb(255, 255, 255);
 }
 /* Frente */
 .flip-card-front {
-  background-color: #fff;
+  background-color: #1b263b;
 }
 .flip-card-front img {
   width: 100%;
@@ -75,8 +74,8 @@ body {
 }
 /* Reverso */
 .flip-card-back {
-  background-color: #2f4a99;
-  color: white;
+  background-color: #1b263b;
+  color: rgb(255, 255, 255);
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -85,13 +84,13 @@ body {
   padding: 20px;
 }
 .flip-card-back a {
-  color: #fffefe;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 .flip-card-back a:hover {
-  color: #ffd700;
+  color: #ffcc00;
 }
 
 /* Info debajo de imagen */
@@ -100,7 +99,7 @@ body {
   text-align: center;
 }
 .image-info h3 {
-  color: #1d40a6;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 

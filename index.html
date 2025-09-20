@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <!--Libreria BootStrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/index.css">
-    
+
 </head>
+
 <body>
-    
+
     <div class="container">
 
-        <h2 style="margin: 10px;">Inicio</h2>
+        <header>
+            <h2 class="my-3">Inicio</h2>
 
-        
+            <nav class="navbar">
+                <ul class="d-flex justify-content-center list-unstyled m-0 p-0 gap-3">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="clases.html">Mis clases</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                </ul>
+            </nav><!--Fin Nav-->
+        </header>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="clases.html">Mis clases</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
-            </ul>
-        </nav><!--Fin Nav-->
-
-        <div class="acceso">
-            <a href="registro.html" class="btn-acceso">Registrarse</a>
+        <section class="acceso d-flex justify-content-center gap-3 my-4">
             <a href="ingresar.html" class="btn-acceso">Ingresar</a>
-        </div><!--Fin botones accesos-->
+        </section><!--Fin botones accesos-->
 
-        <div class="main-home">
-            <div class="imagen-home">
-                <img src="https://www.duoc.cl/wp-content/uploads/2025/02/slider_web_online_2025C-960x600.png" alt="Imagen de ejemplo">
-            </div>
-            <div class="texto-home">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus.</p>
-                <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis.</p>
-            </div>
-        </div><!--Fin main-->
+        <main>
+            <div class="main-home row border rounded p-3 mx-0">
+                <div class="imagen-home col-md-6 d-flex justify-content-center">
+                    <img src="https://www.duoc.cl/wp-content/uploads/2025/02/slider_web_online_2025C-960x600.png"
+                        alt="Imagen de ejemplo" class="img-fluid rounded">
+                </div>
+                <div class="texto-home d-flex flex-column justify-content-center">
+                    <p>Bienvenido a Vivo Asistencia.</p>
+                    <p>Aquí podrás realizar el marcaje de tu asistencia.</p>
+                    <p>Todo esto con los QR distribuidos por las salas o desde aquí.</p>
+                </div>
+            </div><!--Fin main-->
+        </main>
+
     </div>
 
 
-
     <!--Libreria BootStrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -12,6 +12,10 @@
 
     <link rel="stylesheet" href="assets/css/Styles.css">
 </head>
+
+    <!--referencia de js-->
+<script src="assets/js/Perfil.js"></script>
+
 <body>
     <div class="container">
         <nav>
@@ -52,11 +56,19 @@
                 <div class="info-item">
                     <strong>Correo:</strong> aei.ou@prueba.com
                 </div>
-                
+                <div class="info-item">
+                    <strong>Direccion Personal:</strong> Deireccion domicilio
+                </div>
+
+                <div class="actions">
+                    <button class="btn-edit" id="edit-btn">Editar Información</button>
+                    <button class="btn-save" id="save-btn" disabled>Guardar Cambios</button>
+                    <button class="btn-cancel" id="cancel-btn" disabled>Cancelar</button>
+                </div>
                 
             </div>
             
-            <div class="profile-note">
+            <div class="profile-note"> 
                 <h2>Nota de Perfil</h2>
 
                 <div class="note-content">
@@ -69,11 +81,7 @@
                     <li>Cancelar</li>
                 </ul>
 
-                <div class="actions">
-                    <button class="btn-edit" id="edit-btn">Editar Información</button>
-                    <button class="btn-save" id="save-btn" disabled>Guardar Cambios</button>
-                    <button class="btn-cancel" id="cancel-btn" disabled>Cancelar</button>
-                </div>
+                
             </div>
         </div>
     </div>

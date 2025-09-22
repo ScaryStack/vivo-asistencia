@@ -23,16 +23,6 @@ p {
   height: 100vh;
 }
 
-/* Contenedor navbar */
-.navbar {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  background-color: var(--azul-claro);
-  border: 2px solid var(--azul-oscuro);
-  border-radius: 15px;
-  margin: 10px;
-}
 
 /* Lista horizontal */
 .navbar ul {
@@ -41,41 +31,6 @@ p {
   gap: 20px;
   margin: 0;
   padding: 0;
-}
-
-/* Botones como enlaces */
-.navbar ul li a {
-  display: inline-block;
-  padding: 10px 20px;
-  color: var(--blanco);
-  text-decoration: none;
-  border: 2px solid var(--blanco);
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-/* Hover */
-.navbar ul li a:hover {
-  background-color: var(--amarillo);
-  color: black;
-}
-
-/* Activo */
-.navbar ul li a.active {
-  background-color: var(--amarillo);
-  color: black;
-  font-weight: bold;
-}
-
-
-.navbar button {
-  background: transparent;
-  color: var(--amarillo);
-  border: 2px solid var(--amarillo);
-  border-radius: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 
@@ -135,6 +90,7 @@ p {
   gap: 20px;
 }
 
+/*btns asistencia */
 .acciones button {
   background: var(--azul-claro);
   color: var(--blanco);

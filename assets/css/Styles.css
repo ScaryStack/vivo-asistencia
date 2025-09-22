@@ -1,3 +1,12 @@
+/*Paleta de colores*/
+:root {
+    --azul-oscuro: #0d1b2a;
+    --azul-claro: #1b263b;
+    --amarillo: #ffcc00;
+    --blanco: #ffffff;
+}
+
+
 a {
     text-decoration: none;
 }
@@ -6,12 +15,24 @@ li {
     list-style: none;
 }
 
+/* Fondo y tipografía */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-oscuro) 100%);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+
+
 /* NAV, diseño de botones iguales para todos*/
+
+/*Diseño margen botones menu*/
 nav {
   box-shadow: 0 2px 10px rgb(255, 255, 255);
-  padding: 20px 0;
+  padding: 0px 0;
   margin-bottom: 30px;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 .navbar {
   list-style: none;
@@ -23,6 +44,8 @@ nav {
 .navbar li {
   margin: 0;
 }
+
+/*Ajuste tamanos btns menu*/
 .navbar a {
   display: flex;
   align-items: center;
@@ -43,15 +66,15 @@ nav {
 }
 .navbar a:hover {
   color: #000000;
-  background-color: #ffcc00;
-  border-color: #ffcc00;
+  background-color: var(--amarillo);
+  border-color: var(--amarillo);
   transform: translateY(-3px);
   ;
 }
 .navbar a.active {
   color: #000000;
-  background-color: #ffcc00;
-  border-color: #ffcc00;
+  background-color: var(--amarillo);
+  border-color: var(--amarillo);
 }
 
 

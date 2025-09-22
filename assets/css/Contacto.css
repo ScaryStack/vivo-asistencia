@@ -1,18 +1,10 @@
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+    --azul-oscuro: #0d1b2a;
+    --azul-claro: #1b263b;
+    --amarillo: #ffcc00;
+    --blanco: #ffffff;
 }
 
-/* Fondo y tipografía */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0d1b2a 0%, #0d1b2a 100%);
-  line-height: 1.6;
-  min-height: 100vh;
-}
 /*ajusta el fondo para que sea mas largo o no*/
 .container {
   padding-bottom: 50px;
@@ -27,12 +19,12 @@ body {
 }
 .contact-header h1 {
   font-size: 2.5rem;
-  color: #ffcc00;
+  color: var(--amarillo);
   margin-bottom: 15px;
 }
 .contact-header p {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: var(--blanco);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -65,7 +57,7 @@ body {
 }
 /* Frente */
 .flip-card-front {
-  background-color: #1b263b;
+  background-color: var(--azul-claro);
 }
 .flip-card-front img {
   width: 100%;
@@ -74,7 +66,7 @@ body {
 }
 /* Reverso */
 .flip-card-back {
-  background-color: #1b263b;
+  background-color: var(--azul-claro);
   color: rgb(255, 255, 255);
   transform: rotateY(180deg);
   display: flex;
@@ -84,13 +76,13 @@ body {
   padding: 20px;
 }
 .flip-card-back a {
-  color: #ffffff;
+  color: var(--blanco);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 .flip-card-back a:hover {
-  color: #ffcc00;
+  color: var(--amarillo);
 }
 
 /* Info debajo de imagen */
@@ -99,7 +91,11 @@ body {
   text-align: center;
 }
 .image-info h3 {
-  color: #ffffff;
+  color: var(--blanco);
   margin-bottom: 5px;
 }
 
+/*Color de contacto */
+.my-3 {
+  color: var(--blanco);
+}

@@ -5,6 +5,28 @@
     --blanco: #ffffff;
 }
 
+
+/* Estilos para el usuario logueado */
+#usuario-logueado {
+    background-color: var(--azul-claro);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Estilo para el botón de cerrar sesión */
+#cerrar-sesion {
+    background-color: var(--amarillo);
+    color: black;
+    border: 2px solid var(--amarillo);
+}
+
+#cerrar-sesion:hover {
+    background-color: transparent;
+    color: var(--blanco);
+}
+
+
 /*info bienvenidos*/
 body {
     margin: 0;

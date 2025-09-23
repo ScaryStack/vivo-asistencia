@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="assets/css/Styles.css">
 </head>
 
-    <!--referencia de js-->
-<script src="assets/js/perfil_profesor.js"></script>
-
 <body>
     <div class="container">
        
@@ -27,15 +24,12 @@
                 <li><a href="perfil.html" class="active">Perfil Profesor</a></li>
             </ul>
         </nav>
-    </div>
-    <!--Fin nav-->
+    </div><!--Fin nav-->
 
     <div class="container">
         <div class="header">
             <h1>Perfil Profesor</h1>
-        </div>
-
-
+        </div><!--Fin header-->
 
         <div class="profile-container">
             <div class="profile-info">
@@ -54,30 +48,28 @@
                         <div class="info-item">
                             <strong>Correo personal:</strong> prueba3@gmail.com
                         </div>
-                    </div>
+                    </div><!--Fin datos-->
 
                     <div class="profile-photo">
                         <div class="photo-placeholder" onclick="document.getElementById('photo-upload').click()">
-                            <span 
-                            
-                        
-                            class="photo-tex">Cargar foto</>
+                            <span class="photo-tex">Cargar foto</span>
                         </div>
                         <input type="file" id="photo-upload" accept="image/*" style="display: none;">
-                    </div>
+                    </div><!--Fin foto-->
                 </div>
-
 
                 <div class="actions">
                     <button class="btn-edit" id="edit-btn">Actualizar datos</button>
                     <button class="btn-cancel" id="cancel-btn" disabled>Cancelar</button>
-                </div>   
-            </div>
+                </div><!--Fin botones-->   
+            </div><!--Fin perfil-->
         
         </div>
     </div>
                 
-    
+    <!--JavaScript-->
+    <script src="assets/js/perfil_profesor.js"></script>
+
     <!--Libreria BootStrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 

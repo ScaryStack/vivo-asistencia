@@ -1,4 +1,4 @@
-// Esperar a que el DOM esté completamente cargado
+//carga el documento y espera a que esté listo
 document.addEventListener('DOMContentLoaded', function() {
     const editBtn = document.getElementById('edit-btn');
     const cancelBtn = document.getElementById('cancel-btn');
@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let originalValues = {};
     let isEditing = false;
 
+    //habilita la edición de los campos
     function enableEditing() {
         infoItems.forEach(function(item) {
             const key = item.querySelector('strong').textContent.replace(':', '').trim();
@@ -29,11 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
         isEditing = true;
     }
 
+    //guarda los cambios realizados en los campos
     function saveChanges() {
         let hasChanges = false;
         const changes = {};
 
-        // ✅ Validación antes de guardar
+        //validación antes de guardar
         let invalidEmail = false;
 
         document.querySelectorAll('.edit-input').forEach(function(input) {
@@ -44,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (field === 'Correo personal' && !newValue.endsWith('@gmail.com')) {
                 alert('El correo personal debe ser de dominio @gmail.com');
                 invalidEmail = true;
-                return; // sale del bucle
+                return; //sale del bucle
             }
 
             if (newValue !== originalValue) {
@@ -57,10 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         if (invalidEmail) {
-            cancelEditing(); // revierte cambios si correo inválido
+            cancelEditing(); //revierte cambios si correo es invalido
             return;
         }
 
+        //si hay cambios, los muestra en una alerta
         if (hasChanges) {
             alert('Cambios guardados con éxito:\n' + JSON.stringify(changes, null, 2));
             Object.keys(changes).forEach(function(key) {
@@ -68,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } else {
             alert('No se realizaron cambios.');
-        }
+        }//restablece el botón y deshabilita la edición
 
         editBtn.textContent = 'Actualizar datos';
         editBtn.classList.remove('btn-success');
@@ -77,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isEditing = false;
     }
 
+    //cancela la edición y restaura los valores originales
     function cancelEditing() {
         document.querySelectorAll('.edit-input').forEach(function(input) {
             const field = input.dataset.field;
@@ -91,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isEditing = false;
     }
 
+    //event listeners para los botones
     editBtn.addEventListener('click', function() {
         if (!isEditing) {
             enableEditing();

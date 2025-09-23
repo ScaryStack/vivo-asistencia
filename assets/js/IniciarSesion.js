@@ -33,33 +33,46 @@ document.addEventListener("DOMContentLoaded", () => {
       // Guardar correo en localStorage
       localStorage.setItem("usuarioCorreo", correo);
 
-      // Redirigir al home
+      // Redirigir según dominio
       setTimeout(() => {
-        window.location.href = "index.html";
+        if (correo.endsWith(dominio1) || correo.endsWith(dominio3)) {
+          window.location.href = "index.html"; // Página para alumnos
+        } else if (correo.endsWith(dominio2)) {
+          window.location.href = "index.html"; // Página para profesor
+        }
       }, 1000);
     });
   }
 
-  // --- MOSTRAR CORREO EN HOME ---
+  // --- MOSTRAR CORREO Y GESTIONAR SESIÓN ---
   const usuarioLogueado = document.getElementById("usuario-logueado");
+  const cerrarSesionBtn = document.getElementById("cerrar-sesion");
   const correoGuardado = localStorage.getItem("usuarioCorreo");
-  
+
   if (correoGuardado && usuarioLogueado) {
-    // Solo actualizar el elemento de usuario logueado (esquina superior derecha)
     usuarioLogueado.textContent = correoGuardado;
-    
-    // Cambiar el enlace "Iniciar Sesión" por "Cerrar Sesión"
-    const accesoSection = document.querySelector(".acceso");
-    if (accesoSection) {
-      accesoSection.innerHTML = `
-        <a href="#" class="btn-acceso" id="cerrar-sesion">Cerrar Sesión</a>
-      `;
-      
-      // Agregar funcionalidad al botón de cerrar sesión
-      document.getElementById("cerrar-sesion").addEventListener("click", () => {
+
+    if (cerrarSesionBtn) {
+      cerrarSesionBtn.style.display = "inline-block";
+      cerrarSesionBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         localStorage.removeItem("usuarioCorreo");
-        window.location.reload();
+        window.location.href = "ingresar.html";
       });
     }
+
+    // --- Ajustar enlace del menú según dominio ---
+    const enlacesNav = document.querySelectorAll("nav ul li a");
+    enlacesNav.forEach((enlace) => {
+      if (enlace.textContent.includes("Perfil")) {
+        if (correoGuardado.endsWith("prueba1@duocuc.cl") || correoGuardado.endsWith("prueba3@gmail.com")) {
+          enlace.setAttribute("href", "perfil.html");
+          enlace.textContent = "Perfil";
+        } else if (correoGuardado.endsWith("prueba2@profesor.duocuc.cl")) {
+          enlace.setAttribute("href", "perfil_profesor.html");
+          enlace.textContent = "Perfil Profesor";
+        }
+      }
+    });
   }
 });

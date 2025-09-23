@@ -39,9 +39,7 @@ p {
     color: var(--blanco);
 }
 
-
 /* Botones de acceso */
-
 .btn-acceso {
     background: transparent;
     color: var(--blanco);
@@ -50,11 +48,6 @@ p {
     padding: 10px 20px;
     text-decoration: none;
     transition: 0.3s;
-}
-
-.btn-acceso:hover {
-    background-color: var(--amarillo);
-    color: black;
 }
 
 /* Contenido principal del Home */
@@ -76,4 +69,24 @@ p {
 
 .texto-home {
     max-width: 400px;
+}
+
+/* Banner inferior */
+.banner-cambios {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid var(--blanco);
+    border-radius: 15px;
+    text-align: center;
+    background-color: var(--azul-claro);
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--amarillo);
+}
+
+.tenor-gif-embed {
+    max-width: 250px; /* tamaño máximo del gif */
+    margin: 10px auto; /* centrado */
+    border-radius: 10px; /* opcional, para suavizar bordes */
+    overflow: hidden;
 }

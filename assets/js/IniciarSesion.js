@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- LOGIN ---
+  //Boton ingresar
   const btnIngresar = document.getElementById("btn-ingresar");
 
   if (btnIngresar) {
     btnIngresar.addEventListener("click", () => {
+      //Obtener valores de los campos
       const correo = document.getElementById("correo").value.trim();
       const contrasena = document.getElementById("contrasena").value.trim();
       const mensaje = document.getElementById("mensaje");
@@ -12,39 +13,39 @@ document.addEventListener("DOMContentLoaded", () => {
       const dominio3 = "prueba3@gmail.com";
       const contrasenaValida = "12345";
 
-      // Validar correo
+      //Validar correo
       if (!correo.endsWith(dominio1) && !correo.endsWith(dominio2) && !correo.endsWith(dominio3)) {
         mensaje.textContent = "Dirección de correo no válida";
         mensaje.style.color = "red";
         return;
       }
 
-      // Validar contraseña
+      //Validar contraseña
       if (contrasena !== contrasenaValida) {
         mensaje.textContent = "Contraseña incorrecta";
         mensaje.style.color = "red";
         return;
       }
 
-      // Si ambas validaciones son correctas
+      //Acceso permitido
       mensaje.textContent = "Acceso permitido";
       mensaje.style.color = "lightgreen";
 
-      // Guardar correo en localStorage
+      //Guara localmente el correo
       localStorage.setItem("usuarioCorreo", correo);
 
-      // Redirigir según dominio
+      //Redirigir según dominio
       setTimeout(() => {
         if (correo.endsWith(dominio1) || correo.endsWith(dominio3)) {
-          window.location.href = "index.html"; // Página para alumnos
+          window.location.href = "index.html"; //Página para alumnos
         } else if (correo.endsWith(dominio2)) {
-          window.location.href = "index.html"; // Página para profesor
+          window.location.href = "index.html"; //Página para profesor
         }
       }, 1000);
     });
   }
 
-  // --- MOSTRAR CORREO Y GESTIONAR SESIÓN ---
+  //Mostrar usuario logueado y botón cerrar sesión
   const usuarioLogueado = document.getElementById("usuario-logueado");
   const cerrarSesionBtn = document.getElementById("cerrar-sesion");
   const correoGuardado = localStorage.getItem("usuarioCorreo");
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // --- Ajustar enlace del menú según dominio ---
+    //Modificar enlaces de navegación según tipo de usuario
     const enlacesNav = document.querySelectorAll("nav ul li a");
     enlacesNav.forEach((enlace) => {
       if (enlace.textContent.includes("Perfil")) {
